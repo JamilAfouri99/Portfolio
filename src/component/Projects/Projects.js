@@ -9,7 +9,7 @@ const Projects = () => {
         <div className={classes.projects}>
             <Nav />
             <div className={classes.text}>
-                <h2>Our Projects !</h2>
+                <h2>Projects !</h2>
             </div>
             <div className={`${classes.projects_body}`}>
                 <div className='container'>

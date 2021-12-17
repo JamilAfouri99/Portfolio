@@ -35,7 +35,7 @@
 }
 .web_projects >div{
     transition: all 0.7s ease-in-out;
-    background: black;
+    background: #222;
     position: relative;
     overflow: hidden;
     padding: 0rem;
