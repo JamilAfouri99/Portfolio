@@ -1,0 +1,77 @@
+.ContactUs{
+    background: #222222 !important;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.text{
+    /* color: #b7b7b7; */
+    color: whitesmoke;
+    font-size: 2rem;
+    font-family: "Poppins",Helvetica,sans-serif;
+    margin: 3rem;
+    margin-top: 7rem;
+
+}
+form{
+    background: whitesmoke !important;
+    border-radius: 5px;
+    padding: 5rem !important;
+    /* padding-right: 5rem !important;
+    padding-left: 5rem !important; */
+    margin-bottom: 10rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.btnCustom {
+    color: #fff;
+    background-color: #007ced!important;
+    border-color: #007ced !important;
+}
+.btnCustom:hover {
+    color: #fff !important;
+    opacity: 0.9;
+}
+.btnCustom:active {
+    transform: scale(0.97);
+}
+.notValid{
+    background: #ff27272b;
+    border: 3px solid #dc3545;
+    transition: all 0.2s ease-in-out;
+}
+.Valid{
+    background: #bfe7b647;
+    border: 3px solid #28a745;
+    transition: all 0.2s ease-in-out;
+}
+.BeforeCheck{
+    background: none;
+    border: 1px solid #b7b7b7;
+    transition: all 0.2s ease-in-out;
+}
+.formContainer{
+    width:60% !important;
+    transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width:990px) {
+    .formContainer{
+        width:80% !important;
+        transition: all 0.3s ease-in-out;
+    }
+    form{
+        transition: all 0.3s ease-in-out;
+        padding: 3rem !important;
+    }
+}
+@media screen and (max-width:700px) {
+    .formContainer{
+        width:90% !important;
+        transition: all 0.3s ease-in-out;
+    }
+    form{
+        transition: all 0.3s ease-in-out;
+        padding: 2rem !important;
+    }
+}

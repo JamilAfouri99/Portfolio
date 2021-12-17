@@ -1,0 +1,45 @@
+.Footer{
+    margin: 0rem;
+    padding-bottom: 0.2rem;
+    /* margin-top: 1rem; */
+    background: #222222;
+    border-top: 2px solid #333;
+    /* position: absolute; */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.Footer >div{
+    padding-top: 20px;
+    /* display: flex !important;
+    justify-content: space-around !important; */
+    color: #c2c2c2;
+}
+.Footer div ul{
+    list-style: none;
+}
+.Footer div ul li{
+    color: #333;
+    display: inline;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: 0.2s all ease-in-out;
+    font-size: 1.5rem;
+}
+.Footer div ul li a i{
+    color: #c2c2c2;
+    transition: 0.2s all ease-in-out;
+}
+.Footer div ul li a i:hover{
+    color: #007ced;
+    transition: 0.2s all ease-in-out;
+}
+.Footer div div div div div strong{ 
+    font-size: 1.5rem;
+}
+.social_media{
+    margin-bottom: 2rem;
+}
+.contact_me{
+    margin-bottom: 2rem;
+}
