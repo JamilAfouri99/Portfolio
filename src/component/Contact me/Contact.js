@@ -53,8 +53,8 @@ const Contact = () => {
         setIsEntered(false)
         setIsLoading(true)
         try {
-            // const response = await fetch('https://portfolio-9ec35-default-rtdb.firebaseio.com/contactus.json', {
-            const response = await fetch('https://portfolio-9ec35-default-rtdb.firebio.com/contactus.json', {
+            const response = await fetch('https://portfolio-9ec35-default-rtdb.firebaseio.com/contactus.json', {
+            // const response = await fetch('https://portfolio-9ec35-default-rtdb.firebio.com/contactus.json', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
