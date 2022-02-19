@@ -1,8 +1,8 @@
 import classes from './Info.module.css'
 import image from '../../../assets/Desk_Picture.jpg'
-import CV from '../../../assets/Jamil-Afouri-CV-99 (5).pdf'
-import {NavLink} from 'react-router-dom'
-import {useEffect} from 'react'
+import CV from '../../../assets/Afouri-CV-2022.pdf'
+import { NavLink } from 'react-router-dom'
+import { useEffect } from 'react'
 const Info = () => {
     // Start Auto Writing 
     var TxtRotate = function (el, toRotate, period) {
@@ -18,7 +18,7 @@ const Info = () => {
     TxtRotate.prototype.tick = function () {
         var i = this.loopNum % this.toRotate.length;
         var fullTxt = this.toRotate[i];
-        
+
         if (this.isDeleting) {
             this.txt = fullTxt.substring(0, this.txt.length - 1);
         } else {
@@ -26,12 +26,12 @@ const Info = () => {
         }
 
         this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
-        
+
         var that = this;
         var delta = 300 - Math.random() * 100;
-        
+
         if (this.isDeleting) { delta /= 2; }
-        
+
         if (!this.isDeleting && this.txt === fullTxt) {
             delta = this.period;
             this.isDeleting = true;
@@ -40,14 +40,14 @@ const Info = () => {
             this.loopNum++;
             delta = 500;
         }
-        
+
         setTimeout(function () {
             that.tick();
         }, delta);
     };
-    
+
     // window.onload = function () {
-        
+
     // };
     useEffect(() => {
         var elements = document.getElementsByClassName('txt-rotate');
@@ -63,7 +63,7 @@ const Info = () => {
         css.type = "text/css";
         css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
         document.body.appendChild(css);
-    },[])
+    }, [])
     // End Auto Writing 
     return (
         <div className={`container ${classes.Info}`}>
@@ -80,13 +80,13 @@ const Info = () => {
                         <span
                             class="txt-rotate"
                             data-period="2000"
-                            data-rotate='[" Software Development Engineer.", " Video Editor and Animator!" ]'></span>
+                            data-rotate='[" Software Engineer.", " Video Editor and Animator." ]'></span>
                     </h4>
                     <h1 className={classes.h1}>Jamil Afouri</h1>
                     <p className={classes.p}>An ambitious Software developer who seeks to develop his design and engineering skillset to fulfill the expectation of rigorous market of UI engineering, highly motivated, and organized person. I always tend to keep up with new technologies and learn new things by myself. Looking forward to becoming successful and an influencer in a wide range.</p>
                     <div className="flex">
-                    <a href={CV} download='Resume for Jamil Afouri'><button className={`btn btn-primary ${classes.downloadBtn}`}>Download CV</button></a>
-                    <NavLink to='/contact'><button className={`btn btn-primary ${classes.contactBtn}`}>Contact</button></NavLink>
+                        <a href={CV} download='CV for Jamil Afouri'><button className={`btn btn-primary ${classes.downloadBtn}`}>Download CV</button></a>
+                        <NavLink to='/contact'><button className={`btn btn-primary ${classes.contactBtn}`}>Contact</button></NavLink>
                     </div>
                 </div>
             </div>

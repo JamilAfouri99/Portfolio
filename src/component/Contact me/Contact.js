@@ -54,7 +54,7 @@ const Contact = () => {
         setIsLoading(true)
         try {
             const response = await fetch('https://portfolio-9ec35-default-rtdb.firebaseio.com/contactus.json', {
-            // const response = await fetch('https://portfolio-9ec35-default-rtdb.firebio.com/contactus.json', {
+                // const response = await fetch('https://portfolio-9ec35-default-rtdb.firebio.com/contactus.json', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -99,7 +99,7 @@ const Contact = () => {
                             <div className="mb-3">
                                 <label className="form-label">Email Address</label>
                                 <input value={email} className={`form-control ${inEmail ? classes.notValid : inEmail == null ? classes.BeforeCheck : classes.Valid}`} id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required, email" onChange={handleEmail} onBlur={handleBlurEmail} />
-                                {inEmail && <div style={{ color: '#f30f0f', paddingTop: '0.4rem' }}>Email Address Email is not valid.</div>}
+                                {inEmail && <div style={{ color: '#f30f0f', paddingTop: '0.4rem' }}>Email is not valid.</div>}
                             </div>
 
                             {/* <!-- Message input --> */}

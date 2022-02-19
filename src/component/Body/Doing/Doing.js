@@ -13,7 +13,7 @@ const Doing = () => {
                         <i class="fas fa-laptop"></i>
                     </div>
                     <div>
-                        <h4>Web Developer</h4>
+                        <h4>Web Development</h4>
                         <p>Build a professional websites with latest technologies in this field, such as React.js for front-end and Node.js for backend. Also dealing with animation libraries to make the project more attractive to users.</p>
                     </div>
                 </div>
@@ -22,7 +22,7 @@ const Doing = () => {
                         <i class="fas fa-video"></i>
                     </div>
                     <div>
-                        <h4>Video editing and Animator</h4>
+                        <h4>Video editing and Animation</h4>
                         <p>Figuring the best way to fit all the pieces together is what I do best. Creating amazing and memorable videos is what inspires me in life. </p>
                     </div>
                 </div>
