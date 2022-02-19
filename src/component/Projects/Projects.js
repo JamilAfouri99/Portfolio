@@ -1,10 +1,35 @@
 import Footer from '../Footer/Footer'
 import Nav from '../Header/Nav/Nav'
 import classes from './Projects.module.css'
-import smart_resturant from '../../assets/smart-resturant.png'
-import landing_page from '../../assets/pure-javascript.png'
+// import smart_resturant from '../../assets/smart-resturant.png'
+// import landing_page from '../../assets/pure-javascript.png'
+import { useEffect, useState } from 'react'
 
 const Projects = () => {
+    const [projects, setProjects] = useState([])
+    const [loading, setLoading] = useState(false)
+    useEffect(() => {
+        fetchProjects()
+    }, []);
+    const fetchProjects = async () => {
+        try {
+            setLoading(true)
+            const response = await fetch('https://portfolio-9ec35-default-rtdb.firebaseio.com/projects.json')
+            const data = await response.json()
+            // console.log('response', data)
+            for (let key in data) {
+                // console.log(data[key])
+                setProjects((prev) => {
+                    prev.push(data[key])
+                    return [...prev]
+                })
+            }
+            setLoading(false)
+        } catch (error) {
+            console.log(error.message)
+            setLoading(false)
+        }
+    }
     return (
         <div className={classes.projects}>
             <Nav />
@@ -20,34 +45,21 @@ const Projects = () => {
                         </div>
                     </div>
 
-
-                    <div className={`row ${classes.web_projects}`}>
-
-
-
-
-                        <div className='col-md-6 col-sm-12'>
-                            <img src={smart_resturant} alt="smart resturant!" />
-                            <div>
-                                <h2>SMART RESTURANT</h2>
-                                <p>Technologies used : <br /><br />&#x25cf; [React.js (Hooks-Redux-Routing)]<br /> &#x25cf; [Firebase (Database-Authentication-Hosting)]<br />&#x25cf; [CSS (Bootstrap-Animation)] </p>
+                    {loading && <div className={`spinner-border ${classes.spinner}`} role="status">
+                        <span className="sr-only">Loading...</span>
+                    </div>}
+                    {!loading && <div className={`row ${classes.web_projects}`}>
+                        {projects.length > 0 && projects.map((project, index) => (
+                            <div className='col-md-6 col-sm-12' key={index}>
+                                <img src={project.img} alt="landing page!" />
+                                <div>
+                                    <h2>{project.porject_name}</h2>
+                                    {project.description.replaceAll("^\"|\"$", "")}
+                                </div>
+                                <span><a href={project.link}>Link</a></span>
                             </div>
-                            <span><a href='https://smart-restaurant-2c2d9.web.app/shop'>Link</a></span>
-                        </div>
-
-
-
-
-
-                        <div className='col-md-6 col-sm-12'>
-                            <img src={landing_page} alt="landing page!" />
-                            <div>
-                                <h2>LANDING PAGE</h2>
-                                <p>Technologies used : <br /><br />&#x25cf; [Pure (HTML-CSS-JavaScript)] </p>
-                            </div>
-                            <span><a href='https://jamilafouri99.github.io/PURE-JS-PROJECT/'>Link</a></span>
-                        </div>
-                    </div>
+                        ))}
+                    </div>}
                 </div>
             </div>
             <Footer />

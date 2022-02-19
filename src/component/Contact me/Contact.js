@@ -2,11 +2,13 @@ import Footer from '../Footer/Footer'
 import Nav from '../Header/Nav/Nav'
 import classes from './Contact.module.css'
 import React, { useState, useEffect, useContext } from 'react'
+import { useNavigate } from 'react-router-dom';
 // import { useHistory, Prompt } from 'react-router-dom';
 // import Authentication from '../../Support/auth-context';
 const Contact = () => {
     // const history = useHistory();
     // const authCtx = useContext(Authentication)
+    const navigate = useNavigate();
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
@@ -47,30 +49,28 @@ const Contact = () => {
         message.trim().length <= 0 ? setInMessage(true) : setInMessage(false)
     }
     // Start Send Data 
-    const handlePOSTData = async () => {
-        setName(''); setEmail(''); setMessage('');
-        setInName(null); setInEmail(null); setInMessage(null);
-        setIsEntered(false)
+    const handlePOSTData = async (e) => {
+        e.preventDefault()
         setIsLoading(true)
         try {
             const response = await fetch('https://portfolio-9ec35-default-rtdb.firebaseio.com/contactus.json', {
-                // const response = await fetch('https://portfolio-9ec35-default-rtdb.firebio.com/contactus.json', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    name, email, message
-                })
-            });
-            if (!response.ok) {
-                throw 'Faild POST Data!'
-            };
-            history.replace('/home')
+                body: JSON.stringify({ name, email, message })
+            })
+            if (!response.ok) throw 'Faild POST Data!'
+            console.log('DATA SENT SUCCESSFULLY!')
+            navigate('/home');
+            setName(''); setEmail(''); setMessage('');
+            setInName(null); setInEmail(null); setInMessage(null);
+            setIsEntered(false)
         } catch (error) {
             setError(error.message)
+            setIsLoading(false)
         }
         setIsLoading(false)
     }
-    // End Send Data 
+    // End Send Data
     const handleFocus = () => {
         setIsEntered(true)
     }

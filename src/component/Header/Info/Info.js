@@ -25,7 +25,7 @@ const Info = () => {
             this.txt = fullTxt.substring(0, this.txt.length + 1);
         }
 
-        this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+        this.el.innerHTML = '<span className="wrap">' + this.txt + '</span>';
 
         var that = this;
         var delta = 300 - Math.random() * 100;
@@ -67,7 +67,7 @@ const Info = () => {
     // End Auto Writing 
     return (
         <div className={`container ${classes.Info}`}>
-            <div class="row">
+            <div className="row">
                 <div className={`col-lg-5 col-md-12`}>
                     {/* <img src="http://placekitten.com/324/324" alt="my picture!"/> */}
                     <div className={classes.image}>
@@ -78,7 +78,7 @@ const Info = () => {
                     {/* <h6>Web Developer</h6> */}
                     <h4><strong>I am a</strong>
                         <span
-                            class="txt-rotate"
+                            className="txt-rotate"
                             data-period="2000"
                             data-rotate='[" Software Engineer.", " Video Editor and Animator." ]'></span>
                     </h4>

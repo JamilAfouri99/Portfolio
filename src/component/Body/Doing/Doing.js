@@ -10,7 +10,7 @@ const Doing = () => {
             <div className={`row ${classes.myServices}`}>
                 <div className='col-md-6 col-sm-12'>
                     <div>
-                        <i class="fas fa-laptop"></i>
+                        <i className="fas fa-laptop"></i>
                     </div>
                     <div>
                         <h4>Web Development</h4>
@@ -19,7 +19,7 @@ const Doing = () => {
                 </div>
                 <div className='col-md-6 col-sm-12'>
                     <div>
-                        <i class="fas fa-video"></i>
+                        <i className="fas fa-video"></i>
                     </div>
                     <div>
                         <h4>Video editing and Animation</h4>
@@ -30,7 +30,7 @@ const Doing = () => {
             {/* <div className={`row ${classes.myServices}`}>
                 <div className='col-md-6 col-sm-12'>
                     <div>
-                        <i class="fas fa-paint-brush"></i>
+                        <i className="fas fa-paint-brush"></i>
                     </div>
                     <div>
                         <h4>Graphic Designer</h4>

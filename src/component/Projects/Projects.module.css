@@ -1,39 +1,44 @@
-.projects{
-    position:relative;
+.projects {
+    position: relative;
     background: #222222;
     color: whitesmoke;
     height: auto;
     width: 100%;
     padding: 0;
 }
-.text{
+
+.text {
     /* color: #b7b7b7; */
     color: whitesmoke;
     font-size: 2rem;
-    font-family: "Poppins",Helvetica,sans-serif;
+    font-family: "Poppins", Helvetica, sans-serif;
     margin: 3rem;
     margin-top: 7rem;
 }
-.projects_body{
+
+.projects_body {
     margin-top: 6rem;
     /* text-align: left; */
     padding: 1rem;
     margin-bottom: 5rem;
 }
-.web_subject h3{
+
+.web_subject h3 {
     text-align: left;
     border-bottom: 3px solid #007ced;
-    font-family: "Poppins",Helvetica,sans-serif;
+    font-family: "Poppins", Helvetica, sans-serif;
     width: 145px;
     padding-bottom: 8px;
     color: whitesmoke;
 }
-.web_projects{
+
+.web_projects {
     display: flex;
     justify-content: space-around;
     padding: 2rem;
 }
-.web_projects >div{
+
+.web_projects>div {
     transition: all 0.7s ease-in-out;
     background: #222;
     position: relative;
@@ -44,17 +49,19 @@
     border-radius: 5px;
     margin: 1rem;
 }
-.web_projects >div:hover{
-    overflow:visible;
+
+.web_projects>div:hover {
+    overflow: visible;
 }
-.web_projects >div img{
+
+.web_projects>div img {
     width: 100%;
     height: 100%;
 }
 
 
 
-.web_projects >div div{
+.web_projects>div div {
     position: absolute;
     top: 200%;
     left: 0;
@@ -68,22 +75,26 @@
     transition: all 0.7s ease-in-out;
     overflow: auto;
 }
-.web_projects >div:hover div {
+
+.web_projects>div:hover div {
     cursor: pointer;
     transition: all 0.7s ease-in-out;
     top: 0;
     width: 100%;
     height: 100%;
 }
-.web_projects >div div h2{
+
+.web_projects>div div h2 {
     font-weight: bold;
 }
-.web_projects >div div p{
+
+.web_projects>div div p {
     margin-top: 2rem;
     font-weight: bold;
     font-size: 1.1rem;
 }
-.web_projects >div span{
+
+.web_projects>div span {
     position: absolute;
     top: 0;
     left: +400px;
@@ -91,68 +102,82 @@
     width: 79px;
     height: 36px;
     border-bottom-left-radius: 10px;
-    color:#007ced;
+    color: #007ced;
     padding: 3px;
     font-weight: bold;
     font-size: 1.2rem;
     transition: all 0.7s ease-in-out;
 }
-.web_projects >div:hover span{
+
+.web_projects>div:hover span {
     left: -70px;
 }
-.web_projects >div span a{
+
+.web_projects>div span a {
     text-decoration-line: none;
 }
 
-.video_subject{
+.video_subject {
     margin-top: 4rem;
 }
-.video_subject div h3{
+
+.video_subject div h3 {
     text-align: left;
     border-bottom: 3px solid #007ced;
-    font-family: "Poppins",Helvetica,sans-serif;
+    font-family: "Poppins", Helvetica, sans-serif;
     width: 39%;
     padding-bottom: 8px;
 }
-.video_projects >div{
+
+.video_projects>div {
     display: flex;
     justify-content: space-around;
     padding: 2rem;
-    
+
 }
-.video_projects >div div{
+
+.video_projects>div div {
     background: black;
     width: 300px;
     height: 300px;
-    
+
 }
 
+.spinner {
+    margin-top: 10%;
+    width: 5rem;
+    height: 5rem;
+    color: #007ced;
+}
 
 
 
 @media screen and (max-width:1000px) {
-    .web_projects >div{
+    .web_projects>div {
         width: 350px;
         height: 350px;
         transition: all 0.7s ease-in-out;
     }
 }
+
 @media screen and (max-width:700px) {
-    .web_projects >div{
+    .web_projects>div {
         width: 300px;
         height: 300px;
         transition: all 0.7s ease-in-out;
     }
 }
+
 @media screen and (max-width:450px) {
-    .web_projects >div{
+    .web_projects>div {
         width: 250px;
         height: 250px;
         transition: all 0.7s ease-in-out;
     }
 }
+
 @media screen and (max-width:370px) {
-    .web_projects >div{
+    .web_projects>div {
         width: 220px;
         height: 220px;
         transition: all 0.7s ease-in-out;
