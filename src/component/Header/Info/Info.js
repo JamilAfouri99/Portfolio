@@ -3,6 +3,10 @@ import image from '../../../assets/Desk_Picture.jpg'
 import CV from '../../../assets/Afouri-CV-2022.pdf'
 import { NavLink } from 'react-router-dom'
 import { useEffect } from 'react'
+import mainImg from '../../../assets/main2.png'
+import 'animate.css';
+
+
 const Info = () => {
     // Start Auto Writing 
     var TxtRotate = function (el, toRotate, period) {
@@ -67,14 +71,17 @@ const Info = () => {
     // End Auto Writing 
     return (
         <div className={`container ${classes.Info}`}>
-            <div className="row">
-                <div className={`col-lg-5 col-md-12`}>
+            <div className="row flex-lg-row flex-column-reverse" style={{ justifyContent: 'space-between' }}>
+                <div className={`col-lg-5 col-md-12`} style={{ marginBottom: '2rem' }}>
                     {/* <img src="http://placekitten.com/324/324" alt="my picture!"/> */}
-                    <div className={classes.image}>
+                    {/* <div className={classes.image}>
                         <div className={classes.img_circle}><img src={image} alt="my picture!" /></div>
-                    </div>
+                    </div> */}
+                    {/* <div className={classes.image}> */}
+                    <img src={mainImg} className={classes.mainImg} alt="my picture!" width={450} height={400} />
+                    {/* </div> */}
                 </div>
-                <div className={`col-lg-7 col-md-12 ${classes.data}`}>
+                <div className={`col-lg-6 col-md-12 ${classes.data}`}>
                     {/* <h6>Web Developer</h6> */}
                     <h4><strong>I am a</strong>
                         <span

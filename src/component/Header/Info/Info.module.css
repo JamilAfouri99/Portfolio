@@ -1,27 +1,36 @@
-.Info{
+.Info {
     /* display: flex;
     flex-direction: row; */
     padding: 2rem;
-    padding-top: 7rem;
+    padding-top: 5rem;
     width: 100%;
+    margin-top: 5rem;
+    /* display: contents; */
 }
-.Info >div{
+
+.Info>div {
     padding: 2rem;
 }
-.data{
+
+.data {
     text-align: left;
-    margin-bottom: 4rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
-.data h4{
+
+.data h4 {
     color: #aaa;
 }
-.data h4 strong{
-    color: #007ced;
+
+.data h4 strong {
+    color: #02a2fd;
 }
-.data p{
+
+.data p {
     color: #aaa;
 }
-.image{
+
+.image {
     /* background-color: red; */
     display: flex;
     justify-content: center;
@@ -29,44 +38,52 @@
     position: relative;
     margin-bottom: 3rem;
 }
-.image img{
+
+.image img {
     width: 294px;
     height: 294px;
     border-radius: 100%;
     transition: 0.5s all ease-in-out;
-    -webkit-filter: grayscale(100%); 
+    -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     border: 20px solid #444444;
 }
-.image img:hover{
-        -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
-        filter: grayscale(0%);
-        cursor: pointer;
-        transition: 0.3s all ease-in-out;
-        /* transform: rotate(1deg); */
+
+.image img:hover {
+    -webkit-filter: grayscale(0%);
+    /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+    /* transform: rotate(1deg); */
 }
-.h1{
+
+.h1 {
     /* font-family: 'Lato', sans-serif; */
     font-size: 3rem;
     font-weight: bold;
-    font-family: "Poppins",Helvetica,sans-serif;
+    font-family: "Poppins", Helvetica, sans-serif;
 }
-.p{
+
+.p {
     padding: 1rem 0rem;
 }
-.downloadBtn{
+
+.downloadBtn {
     color: #fff !important;
     background-color: #333 !important;
     box-shadow: 0 10px 10px -8px rgb(0 0 0 / 78%) !important;
-    margin-right:1rem ;
+    margin-right: 1rem;
     padding: 0.7rem 2rem;
     transition: 0.5s all ease-in-out !important;
 }
-.downloadBtn:hover{
+
+.downloadBtn:hover {
     transition: 0.5s all ease-in-out !important;
-    background: #007ced !important;
+    background: #02a2fd !important;
 }
-.contactBtn{
+
+.contactBtn {
     color: #fff !important;
     background-color: #333 !important;
     box-shadow: 0 10px 10px -8px rgb(0 0 0 / 78%) !important;
@@ -74,7 +91,8 @@
     padding: 0.7rem 2rem;
     transition: 0.5s all ease-in-out !important;
 }
-.contactBtn:hover{
+
+.contactBtn:hover {
     background: #d5d5d5 !important;
     border: 2px solid #d5d5d5 !important;
     color: black !important;
@@ -82,14 +100,44 @@
 }
 
 @media screen and (max-width:460px) {
-    .downloadBtn{
+    .downloadBtn {
         width: 100%;
     }
-    .contactBtn{
+
+    .contactBtn {
         width: 100%;
         margin-top: 1rem;
     }
-    .h1{
+
+    .h1 {
         font-size: 2.5rem;
     }
 }
+
+@media (max-width:600px) {
+    .mainImg {
+        width: 400px;
+        height: 350px;
+    }
+}
+
+@media (max-width:500px) {
+    .mainImg {
+        width: 350px;
+        height: 300px;
+    }
+}
+
+@media (max-width:450px) {
+    .mainImg {
+        width: 300px;
+        height: 250px;
+    }
+}
+
+/* @media (max-width:380px) {
+    .mainImg {
+        width: 250px;
+        height: 200px;
+    }
+} */

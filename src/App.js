@@ -10,17 +10,17 @@ import Projects from './component/Projects/Projects';
 
 function App() {
   return (
-      <div className="App">
-        <Routes>
-          {/* <Route path="/" exact>
-            <Navigate to="/about_me" />
+    <div className="App">
+      <Routes>
+        {/* <Route path="/" exact>
+            <Navigate to="/home" />
           </Route> */}
-          <Route path="*" element={<Navigate to ="/about_me"/>} />
-          <Route path="/about_me" element={<Portfolio/>}/>
-          <Route path="/contact" element={<Contact/>}/>
-          <Route path="/projects" element={<Projects/>}/>
-        </Routes>
-      </div>
+        <Route path="*" element={<Navigate to="/home" />} />
+        <Route path="/home" element={<Portfolio />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/projects" element={<Projects />} />
+      </Routes>
+    </div>
   );
 }
 

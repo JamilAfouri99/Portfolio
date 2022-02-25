@@ -1,0 +1,71 @@
+.Doing {
+    padding: 1rem;
+    padding-bottom: 8rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.Doing div {
+    padding: 1rem;
+}
+
+.projectsTopic {
+    text-align: left;
+}
+
+.projectsTopic h3 {
+    border-bottom: 3px solid #02a2fd;
+    font-family: "Poppins", Helvetica, sans-serif;
+    width: 15%;
+    padding-bottom: 8px;
+}
+
+.card {
+    margin: 3rem 2rem 5rem;
+    padding: 1rem;
+    justify-content: space-around;
+}
+
+.spinner {
+    margin-top: 10%;
+    margin-bottom: 10rem;
+    width: 5rem;
+    height: 5rem;
+    color: #02a2fd;
+    position: relative;
+    left: 45%;
+}
+
+@media screen and (max-width:1210px) {
+    .projectsTopic h3 {
+        width: 20%;
+    }
+}
+
+@media screen and (max-width:990px) {
+    .projectsTopic h3 {
+        width: 30%;
+    }
+}
+
+@media (max-width:700px) {
+    .card {
+        margin: 3rem 0rem 5rem;
+        padding: 2rem;
+    }
+}
+
+@media (max-width:500px) {
+    .projectsTopic h3 {
+        width: 40%;
+    }
+
+    .spinner {
+        margin-top: 10%;
+        margin-bottom: 10rem;
+        width: 5rem;
+        height: 5rem;
+        color: #02a2fd;
+        position: relative;
+        left: 40%;
+    }
+}

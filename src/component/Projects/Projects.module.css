@@ -3,17 +3,22 @@
     background: #222222;
     color: whitesmoke;
     height: auto;
+    min-height: 100vh;
     width: 100%;
     padding: 0;
+    /* padding-top: 10rem; */
 }
 
 .text {
     /* color: #b7b7b7; */
     color: whitesmoke;
+    padding-top: 20rem;
     font-size: 2rem;
     font-family: "Poppins", Helvetica, sans-serif;
-    margin: 3rem;
-    margin-top: 7rem;
+    padding-top: 25%;
+    padding-bottom: 4%;
+    /* margin: 3rem; */
+    /* margin-top: 7rem; */
 }
 
 .projects_body {
@@ -25,7 +30,7 @@
 
 .web_subject h3 {
     text-align: left;
-    border-bottom: 3px solid #007ced;
+    border-bottom: 3px solid #02a2fd;
     font-family: "Poppins", Helvetica, sans-serif;
     width: 145px;
     padding-bottom: 8px;
@@ -102,7 +107,7 @@
     width: 79px;
     height: 36px;
     border-bottom-left-radius: 10px;
-    color: #007ced;
+    color: #02a2fd;
     padding: 3px;
     font-weight: bold;
     font-size: 1.2rem;
@@ -123,7 +128,7 @@
 
 .video_subject div h3 {
     text-align: left;
-    border-bottom: 3px solid #007ced;
+    border-bottom: 3px solid #02a2fd;
     font-family: "Poppins", Helvetica, sans-serif;
     width: 39%;
     padding-bottom: 8px;
@@ -147,7 +152,7 @@
     margin-top: 10%;
     width: 5rem;
     height: 5rem;
-    color: #007ced;
+    color: #02a2fd;
 }
 
 

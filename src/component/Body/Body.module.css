@@ -1,4 +1,62 @@
-.Body{
+.Body {
     background: #222222;
     color: white;
+}
+
+.partForm {
+    background-color: rgb(20, 20, 20);
+    padding: 2rem;
+}
+
+.partForm div span {
+    display: block;
+    padding: 2rem 15rem;
+}
+
+/* .partForm div:first-of-type {
+    margin-top: 10rem;
+} */
+.projectsTopic {
+    text-align: left;
+    margin: 2rem 0rem
+}
+
+.projectsTopic h3 {
+    border-bottom: 3px solid #02a2fd;
+    font-family: "Poppins", Helvetica, sans-serif;
+    width: 15%;
+    padding-bottom: 8px;
+}
+
+@media screen and (max-width:1210px) {
+    .projectsTopic h3 {
+        width: 20%;
+    }
+
+    .partForm div span {
+        display: block;
+        padding: 2rem 10rem;
+    }
+}
+
+@media screen and (max-width:990px) {
+    .projectsTopic h3 {
+        width: 30%;
+    }
+
+    .partForm div span {
+        display: block;
+        padding: 2rem 5rem;
+    }
+}
+
+@media (max-width:500px) {
+    .projectsTopic h3 {
+        width: 40%;
+    }
+
+    .partForm div span {
+        display: block;
+        padding: 2rem 0rem;
+    }
 }

@@ -33,33 +33,33 @@ const Projects = () => {
     return (
         <div className={classes.projects}>
             <Nav />
-            <div className={classes.text}>
-                <h2>Projects !</h2>
-            </div>
-            <div className={`${classes.projects_body}`}>
-                <div className='container'>
-
-                    <div className='row'>
-                        <div className={`col-12 ${classes.web_subject}`}>
-                            <h3>WEBSITES</h3>
-                        </div>
-                    </div>
-
-                    {loading && <div className={`spinner-border ${classes.spinner}`} role="status">
-                        <span className="sr-only">Loading...</span>
-                    </div>}
-                    {!loading && <div className={`row ${classes.web_projects}`}>
-                        {projects.length > 0 && projects.map((project, index) => (
-                            <div className='col-md-6 col-sm-12' key={index}>
-                                <img src={project.img} alt="landing page!" />
-                                <div>
-                                    <h2>{project.porject_name}</h2>
-                                    {project.description.replaceAll("^\"|\"$", "")}
-                                </div>
-                                <span><a href={project.link}>Link</a></span>
+            <div>
+                <div className={classes.text}>
+                    <h2>Projects !</h2>
+                </div>
+                <div className={`${classes.projects_body}`}>
+                    <div className='container'>
+                        <div className='row'>
+                            <div className={`col-12 ${classes.web_subject}`}>
+                                <h3>WEBSITES</h3>
                             </div>
-                        ))}
-                    </div>}
+                        </div>
+                        {loading && <div className={`spinner-border ${classes.spinner}`} role="status">
+                            <span className="sr-only">Loading...</span>
+                        </div>}
+                        {!loading && <div className={`row ${classes.web_projects}`}>
+                            {projects.length > 0 && projects.map((project, index) => (
+                                <div className='col-md-6 col-sm-12' key={index}>
+                                    <img src={project.img} alt="landing page!" />
+                                    <div>
+                                        <h2>{project.porject_name}</h2>
+                                        {project.description.replaceAll("^\"|\"$", "")}
+                                    </div>
+                                    <span><a href={project.link}>Link</a></span>
+                                </div>
+                            ))}
+                        </div>}
+                    </div>
                 </div>
             </div>
             <Footer />
