@@ -9,7 +9,8 @@ const Projects = () => {
     const [projects, setProjects] = useState([])
     const [loading, setLoading] = useState(false)
     useEffect(() => {
-        fetchProjects()
+        window.scrollTo(0, 0);
+        fetchProjects();
     }, []);
     const fetchProjects = async () => {
         try {

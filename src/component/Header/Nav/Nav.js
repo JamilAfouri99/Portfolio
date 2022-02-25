@@ -31,11 +31,11 @@ const Nav = () => {
                         <li><NavLink activeclassname={classes.active} to='/contact'>Contact</NavLink></li>
                     </ul>
                 </div>}
-                {!isShow && <div className={`float-end ${classes.showIcon}`}>
+                {!isShow && <div className={`float-end ${classes.showIcon}`} style={{ position: 'relative', top: '1.6vh' }}>
                     <button onClick={handleShow}><i className="fas fa-list-ul"></i></button>
                 </div>}
                 <div className={`${classes.small_nav} ${isShow ? classes.show : ''}`}>
-                    {isShow && <div className='float-end' style={{ zIndex: '10' }}>
+                    {isShow && <div className='float-end' style={{ zIndex: '10', position: 'relative', top: '1.6vh' }}>
                         <button onClick={handleHidden}><i className="fas fa-times"></i></button>
                     </div>}
                     <h3>PORTFOLIO</h3>

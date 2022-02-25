@@ -12,7 +12,7 @@ const Body = () => {
             <div className={classes.partForm} >
                 <div className='container'>
                     <div className={classes.projectsTopic}>
-                        <h3>My Projects</h3>
+                        <h3>Contact with me</h3>
                     </div>
                     <span><Form /></span>
                 </div>

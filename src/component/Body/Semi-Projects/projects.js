@@ -39,7 +39,7 @@ const Semi_projects = () => {
                 </div>}
                 {!loading && <div className={`row ${classes.card}`}>
                     {projects.map((project, index) => (
-                        <Project key={index} name={project.project_name} img={project.img} link={project.link} description={project.description} />
+                        <Project key={index} name={project.project_name} img={project.img} link={project.link} description={project.short_description} />
                     ))}
                 </div>}
             </div>

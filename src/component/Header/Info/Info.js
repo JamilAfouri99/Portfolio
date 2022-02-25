@@ -5,9 +5,13 @@ import { NavLink } from 'react-router-dom'
 import { useEffect } from 'react'
 import mainImg from '../../../assets/main2.png'
 import 'animate.css';
-
+import gif from '../../../assets/down-arrow (2).gif'
+import UseAnimations from "react-useanimations";
+import * as Scroll from 'react-scroll';
+import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 const Info = () => {
+    let Link = Scroll.Link;
     // Start Auto Writing 
     var TxtRotate = function (el, toRotate, period) {
         this.toRotate = toRotate;
@@ -90,11 +94,22 @@ const Info = () => {
                             data-rotate='[" Software Engineer.", " Video Editor and Animator." ]'></span>
                     </h4>
                     <h1 className={classes.h1}>Jamil Afouri</h1>
-                    <p className={classes.p}>An ambitious Software developer who seeks to develop his design and engineering skillset to fulfill the expectation of rigorous market of UI engineering, highly motivated, and organized person. I always tend to keep up with new technologies and learn new things by myself. Looking forward to becoming successful and an influencer in a wide range.</p>
+                    <p className={classes.p}>Software Developer with a knack for developing a memorable customer experience that emphasizes brand messaging.
+                        Maintains up-to-date awareness of technological trends and technology advances.</p>
                     <div className="flex">
                         <a href={CV} download='CV for Jamil Afouri'><button className={`btn btn-primary ${classes.downloadBtn}`}>Download CV</button></a>
                         <NavLink to='/contact'><button className={`btn btn-primary ${classes.contactBtn}`}>Contact</button></NavLink>
                     </div>
+                </div>
+                {/* <div style={{ display: 'flex', flexFlow: 'column', alignItems: 'center' }}> */}
+                <div>
+                    <Link to="doing">
+                        <svg className={classes.arrows} >
+                            <path className={classes.a1} d="M0 0 L30 32 L60 0"></path>
+                            <path className={classes.a2} d="M0 20 L30 52 L60 20"></path>
+                            <path className={classes.a3} d="M0 40 L30 72 L60 40"></path>
+                        </svg>
+                    </Link>
                 </div>
             </div>
         </div>

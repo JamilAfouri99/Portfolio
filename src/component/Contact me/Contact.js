@@ -13,24 +13,24 @@ const Contact = () => {
     const handleLoading = ($state) => {
         $state == true ? setIsLoading(true) : setIsLoading(false)
     }
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    })
     return (
-        <>
-            <Nav />
-            <div className={classes.ContactUs}>
-                <div className={classes.text}>Contact Us !</div>
-                <div className={`container pt-4 ${classes.FormBack}`} style={{ width: '100%' }}>
-                    <div className={`container py-4 mt-4 ${classes.formContainer} ${!isLoading ? 'text-left' : 'text-center'}`}>
-                        {/* <!-- Bootstrap 5 starter form --> */}
-                        {isLoading && <div className="spinner-border" style={{ width: '3rem', height: '3rem', marginTop: '12rem', marginBottom: '10rem', color: '#02a2fd' }} role="status">
-                            <span className="sr-only">Loading...</span>
-                        </div>}
-                        {!isLoading && <Form handleLoading={handleLoading} />}
-
-                    </div>
+        <div className={classes.ContactUs}>
+            <div style={{ position: 'relative' }}><Nav /></div>
+            <div className={classes.text}>Contact Us !</div>
+            <div className={`container pt-4 ${classes.FormBack}`} style={{ width: '100%' }}>
+                <div className={`container py-4 mt-4 ${classes.formContainer} ${!isLoading ? 'text-left' : 'text-center'}`}>
+                    {/* <!-- Bootstrap 5 starter form --> */}
+                    {isLoading && <div className="spinner-border" style={{ width: '3rem', height: '3rem', marginTop: '12rem', marginBottom: '10rem', color: '#02a2fd' }} role="status">
+                        <span className="sr-only">Loading...</span>
+                    </div>}
+                    {!isLoading && <Form handleLoading={handleLoading} />}
                 </div>
-                <Footer />
             </div>
-        </>
+            <Footer />
+        </div>
     )
 
 }

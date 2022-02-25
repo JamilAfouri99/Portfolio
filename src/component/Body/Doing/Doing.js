@@ -1,8 +1,10 @@
 import classes from './Doing.module.css'
+// import { loadAnimation } from "lottie-web";
+// import { defineLordIconElement } from "lord-icon-element";
 
 const Doing = () => {
     return (
-        <div style={{ backgroundColor: '#141414', marginBottom: '4rem', paddingTop: '2rem' }}>
+        <div style={{ backgroundColor: '#141414', marginBottom: '4rem', paddingTop: '2rem' }} name="doing">
             <div className={`container ${classes.Doing}`}>
                 <div className={classes.whatIdo}>
                     <h3>What I Do</h3>
