@@ -1,25 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
-import Portfolio from './component/Portfolio';
-import Contact from './component/Contact me/Contact';
-import { Route, Router, Routes, Navigate } from 'react-router-dom';
-import Projects from './component/Projects/Projects';
-// import {Route, Redirect, Switch} from 'react-router-dom'
-// import {Router,Route, Switch, Routes} from 'react-router-dom';
+import React, { lazy, Suspense } from 'react'
+import { Route, Navigate, Routes } from 'react-router-dom';
+const Portfolio = lazy(() => import('./component/Portfolio'))
+const Contact = lazy(() => import('./component/Contact me/Contact'))
+const Projects = lazy(() => import('./component/Projects/Projects'))
 
 
 function App() {
   return (
     <div className="App">
-      <Routes>
-        {/* <Route path="/" exact>
-            <Navigate to="/home" />
-          </Route> */}
-        <Route path="*" element={<Navigate to="/home" />} />
-        <Route path="/home" element={<Portfolio />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/projects" element={<Projects />} />
-      </Routes>
+      <Suspense fallback={
+        <div className={'spinner'}>
+          <div className='spinner-border' role="status">
+            <span className="sr-only">Loading...</span>
+          </div>
+        </div>}>
+        <Routes>
+          <Route path="*" element={<Navigate to="/home" />} />
+          <Route path="/home" element={<Portfolio />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/projects" element={<Projects />} />
+        </Routes>
+      </Suspense>
     </div>
   );
 }

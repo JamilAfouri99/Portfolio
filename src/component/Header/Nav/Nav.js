@@ -11,6 +11,7 @@ const Nav = () => {
     const handleHidden = () => {
         isShowChanger(false)
     }
+    const classNameFunc = ({ isActive }) => (isActive ? classes.active : "");
     return (
         <div className={`flex ${classes.Nav}`}>
             <div className="container">
@@ -26,9 +27,9 @@ const Nav = () => {
                 {!isShow && <div className={`float-end ${classes.ul}`}>
                     <ul>
                         {/* <li><NavLink activeclassname={classes.active} to='/resume'>Resume</NavLink></li> */}
-                        <li><NavLink activeclassname={classes.active} to='/home'>Home</NavLink></li>
-                        <li><NavLink activeclassname={classes.active} to='/projects'>Projects</NavLink></li>
-                        <li><NavLink activeclassname={classes.active} to='/contact'>Contact</NavLink></li>
+                        <li><NavLink className={classNameFunc} to='/home'>Home</NavLink></li>
+                        <li><NavLink className={classNameFunc} to='/projects'>Projects</NavLink></li>
+                        <li><NavLink className={classNameFunc} to='/contact'>Contact</NavLink></li>
                     </ul>
                 </div>}
                 {!isShow && <div className={`float-end ${classes.showIcon}`} style={{ position: 'relative', top: '1.6vh' }}>
@@ -40,9 +41,9 @@ const Nav = () => {
                     </div>}
                     <h3>PORTFOLIO</h3>
                     <ul>
-                        <li><NavLink activeclassname={classes.active} to='/home'>Home</NavLink></li>
-                        <li><NavLink activeclassname={classes.active} to='/projects'>Projects</NavLink></li>
-                        <li><NavLink activeclassname={classes.active} to='/contact'>Contact</NavLink></li>
+                        <li><NavLink className={classNameFunc} to='/home'>Home</NavLink></li>
+                        <li><NavLink className={classNameFunc} to='/projects'>Projects</NavLink></li>
+                        <li><NavLink className={classNameFunc} to='/contact'>Contact</NavLink></li>
                     </ul>
                 </div>
             </div>
