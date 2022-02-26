@@ -103,7 +103,7 @@ const Info = () => {
                 </div>
                 {/* <div style={{ display: 'flex', flexFlow: 'column', alignItems: 'center' }}> */}
                 <div>
-                    <Link to="doing">
+                    <Link to="doing" style={{ cursor: 'pointer' }}>
                         <svg className={classes.arrows} >
                             <path className={classes.a1} d="M0 0 L30 32 L60 0"></path>
                             <path className={classes.a2} d="M0 20 L30 52 L60 20"></path>
