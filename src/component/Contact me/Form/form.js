@@ -25,11 +25,6 @@ const Form = (props) => {
     const handleMessage = (data) => {
         setMessage(data.target.value)
     }
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        checkLoggedIn()
-        // console.log({ name, email, message })
-    }
     useEffect(() => {
         name.trim().length > 8 && email.includes('@') && message.trim().length > 0 ? setIsAble(true) : setIsAble(false)
     }, [handleName, handleEmail, handleMessage]);
